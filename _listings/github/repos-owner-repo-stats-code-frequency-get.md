@@ -54,6 +54,7 @@ paths:
       - stats
       - code
       - frequency
+      - aggregation
 definitions:
   asset:
     properties:
