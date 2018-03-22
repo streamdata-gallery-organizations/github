@@ -56,7 +56,7 @@ paths:
       - repos
       - owner
       - repo
-      - archive
+      - archives
       - format
       - path
 definitions:
