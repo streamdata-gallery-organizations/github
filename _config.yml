@@ -1,9 +1,9 @@
-title: Streamdata Gallery
-url: github.api.streamdata.gallery
+title: Streamdata Gallery GitHub
+url: github.streamdata.gallery
 tag: GitHub
 markdown: kramdown
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
-github_user: streamdata-gallery-organizations
+github_user: streamdata-gallery
 github_repo: github
 github_branch: master
 collections:
