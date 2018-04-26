@@ -1,7 +1,7 @@
 {% assign stream_url = 'curl -v ' %}
 {% for parameter in api_path_parameters %}
   {% if parameter.in == 'header' %}
-    {% assign stream_url = stream_url | append: ' -h ' | append: '"' | append: parameter.in | append: '{header_value}"' %}
+    {% assign stream_url = stream_url | append: ' -h ' | append: '"' | append: parameter.name | append: ':{header_value}"' %}
   {% endif %}
 {% endfor %}
 
