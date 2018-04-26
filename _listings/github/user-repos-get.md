@@ -28,18 +28,10 @@ paths:
         name: Accept
         description: Is used to set specified media type
       - in: query
+        name: access_token
+        description: Your Github OAuth token
+      - in: query
         name: type
-      - in: header
-        name: X-GitHub-Media-Type
-        description: You can check the current version of media type in responses
-      - in: header
-        name: X-GitHub-Request-Id
-      - in: header
-        name: X-RateLimit-Limit
-      - in: header
-        name: X-RateLimit-Remaining
-      - in: header
-        name: X-RateLimit-Reset
       responses:
         200:
           description: OK
