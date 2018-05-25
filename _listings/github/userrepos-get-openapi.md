@@ -1982,7 +1982,7 @@ paths:
       summary: Get Repos Owner Repo Compare Base ... Head
       description: Compare two commits
       operationId: compare-two-commits
-      x-api-path-slug: reposownerrepocomparebaseidheadid-get
+      x-api-path-slug: reposownerrepocomparebaseid---headid-get
       parameters:
       - in: header
         name: Accept

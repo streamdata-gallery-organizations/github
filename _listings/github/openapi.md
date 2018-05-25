@@ -4,7 +4,7 @@ x-collection-name: GitHub
 x-complete: 1
 info:
   title: GitHub
-  description: github-is-the-best-place-to-share-code-with-friends-coworkers-classmates-and-complete-strangers-over-24-million-people-use-github-to-build-amazing-things-together-across-67-million-repositories-with-the-collaborative-features-of-githubcom-and-github-business-it-has-never-been-easier-for-individuals-and-teams-to-write-faster-better-code
+  description: github-is-the-best-place-to-share-code-with-friends-coworkers-classmates-and-complete-strangers--over-24-million-people-use-github-to-build-amazing-things-together-across-67-million-repositories--with-the-collaborative-features-of-github-com-and-github-business-it-has-never-been-easier-for-individuals-and-teams-to-write-faster-better-code-
   termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
   version: 1.0.0
 host: api.github.com
@@ -1979,7 +1979,7 @@ paths:
       summary: Get Repos Owner Repo Compare Base ... Head
       description: Compare two commits
       operationId: compare-two-commits
-      x-api-path-slug: reposownerrepocomparebaseidheadid-get
+      x-api-path-slug: reposownerrepocomparebaseid---headid-get
       parameters:
       - in: header
         name: Accept
