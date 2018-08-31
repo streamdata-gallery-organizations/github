@@ -1,0 +1,33 @@
+{
+	"name": "Streadata.io API Gallery - GitHub",
+	"description": "This is a repository of github APIs, self-contained as a Github repository, with HTML and YAML representations of the APIs and their surrounding operations.",
+	"image": "http://template.streamdata.gallery/assets/github.png",
+	"created": "2018-02-24",
+	"modified": "2018-08-30",
+	"url": "http://github.streamdata.gallery/apis.json",
+	"specificationVersion": "0.14",
+	"apis": [
+		{
+			"name": "GitHub",
+			"x-api-slug": "github",
+			"description": "GitHub brings together the worlds largest community of developers to discover, share, and build better software. From open source projects to private team repositories, were your all-in-one platform for collaborative development.",
+			"image": "http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/github-logo.png",
+			"humanURL": "https://github.com",
+			"baseURL": "https:///",
+			"tags": "GitHub",
+			"properties": [
+				{
+					"type": "x-openapi-spec",
+					"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/github/master/_listings/github/openapi.md"
+				}
+			]
+		}
+	],
+	"tags": "GitHub",
+	"include": [
+		{
+			"name": "GitHub",
+			"url": "https://raw.githubusercontent.com/streamdata-gallery-organizations/github/master/_listings/github/apis.yaml"
+		}
+	]
+}
