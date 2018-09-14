@@ -12,8 +12,8 @@
 {% assign api_json_asyncapi_url = "" %}
 
 {% for api in apis_json.apis %}
-
-   {% if api.x-api-slug == api_path_slug %}
+  
+   {% if api_name == page.x-collection-name %}
 
     {% assign api_url = api.humanURL %}
 
