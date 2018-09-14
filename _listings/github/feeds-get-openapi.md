@@ -1,41 +1,5 @@
 ---
 paths:
-  /emojis:
-    get:
-      summary: Get Emojis
-      description: Lists all the emojis available to use on GitHub.
-      operationId: lists-all-the-emojis-available-to-use-on-github
-      x-api-path-slug: emojis-get
-      parameters:
-      - in: header
-        name: Accept
-        description: Is used to set specified media type
-      - in: query
-        name: access_token
-        description: Your Github OAuth token
-      responses:
-        200:
-          description: OK
-      tags:
-      - Emojis
-  /events:
-    get:
-      summary: Get Events
-      description: List public events.
-      operationId: list-public-events
-      x-api-path-slug: events-get
-      parameters:
-      - in: header
-        name: Accept
-        description: Is used to set specified media type
-      - in: query
-        name: access_token
-        description: Your Github OAuth token
-      responses:
-        200:
-          description: OK
-      tags:
-      - Events
   /feeds:
     get:
       summary: Get Feeds
