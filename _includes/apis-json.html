@@ -17,8 +17,6 @@
 
     {% assign api_url = api.humanURL %}
 
-      name: {{ api.name }} <br />
-
      {% for property in api.properties %}
 
        {% if property.type == 'x-openapi-spec' %}
