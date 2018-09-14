@@ -1,0 +1,56 @@
+{% for entry in listing_object %}
+  {% if entry.name %}
+
+      {% assign api_name = entry.name %}
+      {% assign api_slug = entry.x-slug %}
+      {% assign api_description = entry.description %}
+      {% assign api_image = entry.image %}
+      {% assign api_json_url = entry.url %}
+      {% assign api_json_kin_rank = entry.x-kinRank %}
+      {% assign api_json_alexa_rank = entry.x-alexaRank %}
+
+      {% assign api_json_webhook = "" %}
+      {% for resource in entry.x-common %}
+        {% if resource.type == 'x-webhook' %}
+          {% assign api_json_webhook = resource.url %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign apis_json = entry %}
+      {% include x-common.html %}
+
+      <br />- <!--<a href="http://{{ api_slug | replace: '-','.' }}.api.gallery.streamdata.io/" style="color:#000;">--><strong>{{ api_name }}</strong><!--</a>--> - {{ api_description }}{% if site.github_repo == 'webhook-implementations' %} (<a href="{{ api_json_webhook }}" style="color:#000; text-decoration: underline;">View Webhook Implementation</a>){% endif %}<br /><br />
+        {% if website_url != '' %}
+        &emsp;- <a href="{{ website_url }}" target="_blank">Website</a><br />
+        {% endif %}
+
+        {% if portal_url != '' %}
+        &emsp;- <a href="{{ portal_url }}" target="_blank">Portal</a><br />
+        {% endif %}
+
+        {% if getting_started_url != '' %}
+        &emsp;- <a href="{{ getting_started_url }}" target="_blank">Getting Started</a><br />
+        {% endif %}
+
+        {% if documentation_url != '' %}
+        &emsp;- <a href="{{ documentation_url }}" target="_blank">Documentation</a><br />
+        {% endif %}
+
+        {% if blog_url != '' %}
+        &emsp;- <a href="{{ blog_url }}" target="_blank">Blog</a><br />
+        {% endif %}
+
+        {% if blogrss_url != '' %}
+        &emsp;- <a href="{{ blogrss_url }}" target="_blank">Blog RSS</a><br />
+        {% endif %}
+
+        {% if twitter_url != '' %}
+        &emsp;- <a href="{{ twitter_url }}" target="_blank">Twitter</a><br />
+        {% endif %}
+
+        {% if gitub_url != '' %}
+        &emsp;- <a href="{{ gitub_url }}" target="_blank">Github</a><br />
+        {% endif %}
+
+  {% endif %}
+{% endfor %}
