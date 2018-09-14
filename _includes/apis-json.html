@@ -13,7 +13,7 @@
 
 {% for api in apis_json.apis %}
 
-   {% if api_name == api.x-api-slug %}
+   {% if api_path_slug == api.x-api-slug %}
 
     {% assign api_url = api.humanURL %}
 
