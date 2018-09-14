@@ -1,4 +1,20 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get User Starred
+  description: List repositories being starred by the authenticated user.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /user/starred:
     get:
@@ -24,10 +40,6 @@ paths:
       tags:
       - User
       - Starred
-x-complete: 0
-info:
-  title: Github Get User Starred
-  description: List repositories being starred by the authenticated user.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

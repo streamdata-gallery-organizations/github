@@ -1,4 +1,26 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Add Repos Owner Repo Hooks Hook Tests
+  description: |-
+    Test a push hook.
+    This will trigger the hook with the latest push to the current repository
+    if the hook is subscribed to push events. If the hook is not subscribed
+    to push events, the server will respond with 204 but no test POST will
+    be generated.
+    Note: Previously /repos/:owner/:repo/hooks/:id/tes
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/hooks/{hookId}/tests:
     post:
@@ -38,16 +60,6 @@ paths:
       - Hooks
       - Hook
       - Tests
-x-complete: 0
-info:
-  title: Github Add Repos Owner Repo Hooks Hook Tests
-  description: |-
-    Test a push hook.
-    This will trigger the hook with the latest push to the current repository
-    if the hook is subscribed to push events. If the hook is not subscribed
-    to push events, the server will respond with 204 but no test POST will
-    be generated.
-    Note: Previously /repos/:owner/:repo/hooks/:id/tes
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

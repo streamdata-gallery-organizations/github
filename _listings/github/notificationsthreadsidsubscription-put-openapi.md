@@ -1,4 +1,24 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Put Notifications Threads  Subscription
+  description: |-
+    Set a Thread Subscription.
+    This lets you subscribe to a thread, or ignore it. Subscribing to a thread
+    is unnecessary if the user is already subscribed to the repository. Ignoring
+    a thread will mute all future notifications (until you comment or get @mentioned).
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /notifications/threads/{id}/subscription:
     put:
@@ -32,14 +52,6 @@ paths:
       - Threads
       - ""
       - Subscription
-x-complete: 0
-info:
-  title: Github Put Notifications Threads  Subscription
-  description: |-
-    Set a Thread Subscription.
-    This lets you subscribe to a thread, or ignore it. Subscribing to a thread
-    is unnecessary if the user is already subscribed to the repository. Ignoring
-    a thread will mute all future notifications (until you comment or get @mentioned).
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

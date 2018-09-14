@@ -1,4 +1,22 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Teams Team Memberships Username
+  description: |-
+    Get team membership.
+    In order to get a user's membership with a team, the authenticated user must be a member of the team or an owner of the team's organization.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /teams/{teamId}/memberships/{username}:
     get:
@@ -29,12 +47,6 @@ paths:
       - Team
       - Memberships
       - Username
-x-complete: 0
-info:
-  title: Github Get Teams Team Memberships Username
-  description: |-
-    Get team membership.
-    In order to get a user's membership with a team, the authenticated user must be a member of the team or an owner of the team's organization.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -1,4 +1,21 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Users Username Events
+  description: If you are authenticated as the given user, you will see your private
+    events. Otherwise, you'll only see public events.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /users/{username}/events:
     get:
@@ -24,11 +41,6 @@ paths:
       - Users
       - Username
       - Events
-x-complete: 0
-info:
-  title: Github Get Users Username Events
-  description: If you are authenticated as the given user, you will see your private
-    events. Otherwise, you'll only see public events.
 x-streamrank:
   polling_total_time_average: "0.21"
   polling_size_download_average: "31132.75"

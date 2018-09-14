@@ -1,4 +1,23 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Put Repos Owner Repo Notifications
+  description: |-
+    Mark notifications as read in a repository.
+    Marking all notifications in a repository as "read" removes them from the
+    default view on GitHub.com.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/notifications:
     put:
@@ -34,13 +53,6 @@ paths:
       - Owner
       - Repo
       - Notifications
-x-complete: 0
-info:
-  title: Github Put Repos Owner Repo Notifications
-  description: |-
-    Mark notifications as read in a repository.
-    Marking all notifications in a repository as "read" removes them from the
-    default view on GitHub.com.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

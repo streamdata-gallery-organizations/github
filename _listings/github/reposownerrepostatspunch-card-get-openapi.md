@@ -1,4 +1,29 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Stats Punch Card
+  description: |-
+    Get the number of commits per hour in each day.
+    Each array contains the day number, hour number, and number of commits
+    0-6 Sunday - Saturday
+    0-23 Hour of day
+    Number of commits
+
+    For example, [2, 14, 25] indicates that there were 25 total commits, during
+    the 2.00pm hour on Tuesdays. All times are based on the time zone of
+    individual commits.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/stats/punch_card:
     get:
@@ -38,19 +63,6 @@ paths:
       - Stats
       - Punch
       - Card
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Stats Punch Card
-  description: |-
-    Get the number of commits per hour in each day.
-    Each array contains the day number, hour number, and number of commits
-    0-6 Sunday - Saturday
-    0-23 Hour of day
-    Number of commits
-
-    For example, [2, 14, 25] indicates that there were 25 total commits, during
-    the 2.00pm hour on Tuesdays. All times are based on the time zone of
-    individual commits.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

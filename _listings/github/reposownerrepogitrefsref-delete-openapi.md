@@ -1,4 +1,21 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Delete Repos Owner Repo Git Refs Ref
+  description: "Delete a Reference\nExample: Deleting a branch: DELETE /repos/octocat/Hello-World/git/refs/heads/feature-a
+    \nExample: Deleting a tag:        DELETE /repos/octocat/Hello-World/git/refs/tags/v1.0"
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/git/refs/{ref}:
     delete:
@@ -32,11 +49,6 @@ paths:
       - Git
       - Refs
       - Ref
-x-complete: 0
-info:
-  title: Github Delete Repos Owner Repo Git Refs Ref
-  description: "Delete a Reference\nExample: Deleting a branch: DELETE /repos/octocat/Hello-World/git/refs/heads/feature-a
-    \nExample: Deleting a tag:        DELETE /repos/octocat/Hello-World/git/refs/tags/v1.0"
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

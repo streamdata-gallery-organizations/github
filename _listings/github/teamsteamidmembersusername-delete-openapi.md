@@ -1,4 +1,27 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Delete Teams Team Members Username
+  description: |-
+    The "Remove team member" API is deprecated and is scheduled for removal in the next major version of the API. We recommend using the Remove team membership API instead. It allows you to remove both active and pending memberships.
+
+    Remove team member.
+    In order to remove a user from a team, the authenticated user must have 'admin'
+    permissions to the team or be an owner of the org that the team is associated
+    with.
+    NOTE This does not delete the user, it just remove them from the team.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /teams/{teamId}/members/{username}:
     delete:
@@ -34,17 +57,6 @@ paths:
       - Team
       - Members
       - Username
-x-complete: 0
-info:
-  title: Github Delete Teams Team Members Username
-  description: |-
-    The "Remove team member" API is deprecated and is scheduled for removal in the next major version of the API. We recommend using the Remove team membership API instead. It allows you to remove both active and pending memberships.
-
-    Remove team member.
-    In order to remove a user from a team, the authenticated user must have 'admin'
-    permissions to the team or be an owner of the org that the team is associated
-    with.
-    NOTE This does not delete the user, it just remove them from the team.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

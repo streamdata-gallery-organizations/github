@@ -1,4 +1,20 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Organizations
+  description: Get all organizations
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /organizations:
     get:
@@ -11,10 +27,6 @@ paths:
           description: OK
       tags:
       - Organizations
-x-complete: 0
-info:
-  title: Github Get Organizations
-  description: Get all organizations
 x-streamrank:
   polling_total_time_average: "0.16"
   polling_size_download_average: "16805.74"

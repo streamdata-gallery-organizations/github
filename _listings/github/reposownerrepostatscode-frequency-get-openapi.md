@@ -1,4 +1,23 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Stats Code Frequency
+  description: |-
+    Get the number of additions and deletions per week.
+    Returns a weekly aggregate of the number of additions and deletions pushed
+    to a repository.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/stats/code_frequency:
     get:
@@ -33,13 +52,6 @@ paths:
       - Code
       - Frequency
       - Aggregation
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Stats Code Frequency
-  description: |-
-    Get the number of additions and deletions per week.
-    Returns a weekly aggregate of the number of additions and deletions pushed
-    to a repository.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

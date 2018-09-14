@@ -1,4 +1,22 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Add Orgs Org Repos
+  description: |-
+    Create a new repository for the authenticated user. OAuth users must supply
+    repo scope.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /orgs/{org}/repos:
     post:
@@ -29,12 +47,6 @@ paths:
       - Orgs
       - Org
       - Repos
-x-complete: 0
-info:
-  title: Github Add Orgs Org Repos
-  description: |-
-    Create a new repository for the authenticated user. OAuth users must supply
-    repo scope.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

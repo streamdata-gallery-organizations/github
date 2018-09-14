@@ -1,4 +1,23 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Languages
+  description: |-
+    List languages.
+    List languages for the specified repository. The value on the right of a
+    language is the number of bytes of code written in that language.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/languages:
     get:
@@ -30,13 +49,6 @@ paths:
       - Owner
       - Repo
       - Languages
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Languages
-  description: |-
-    List languages.
-    List languages for the specified repository. The value on the right of a
-    language is the number of bytes of code written in that language.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

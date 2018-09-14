@@ -1,4 +1,25 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Git Blobs Shacode
+  description: |-
+    Get a Blob.
+    Since blobs can be any arbitrary binary data, the input and responses for
+    the blob API takes an encoding parameter that can be either utf-8 or
+    base64. If your data cannot be losslessly sent as a UTF-8 string, you can
+    base64 encode it.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/git/blobs/{shaCode}:
     get:
@@ -37,15 +58,6 @@ paths:
       - Git
       - Blobs
       - Shacode
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Git Blobs Shacode
-  description: |-
-    Get a Blob.
-    Since blobs can be any arbitrary binary data, the input and responses for
-    the blob API takes an encoding parameter that can be either utf-8 or
-    base64. If your data cannot be losslessly sent as a UTF-8 string, you can
-    base64 encode it.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

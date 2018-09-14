@@ -1,4 +1,25 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Teams Team Members Username
+  description: |-
+    The "Get team member" API is deprecated and is scheduled for removal in the next major version of the API. We recommend using the Get team membership API instead. It allows you to get both active and pending memberships.
+
+    Get team member.
+    In order to get if a user is a member of a team, the authenticated user mus
+    be a member of the team.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /teams/{teamId}/members/{username}:
     get:
@@ -32,15 +53,6 @@ paths:
       - Team
       - Members
       - Username
-x-complete: 0
-info:
-  title: Github Get Teams Team Members Username
-  description: |-
-    The "Get team member" API is deprecated and is scheduled for removal in the next major version of the API. We recommend using the Get team membership API instead. It allows you to get both active and pending memberships.
-
-    Get team member.
-    In order to get if a user is a member of a team, the authenticated user mus
-    be a member of the team.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

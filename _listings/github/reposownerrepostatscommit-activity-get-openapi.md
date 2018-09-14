@@ -1,4 +1,23 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Stats Commit Activity
+  description: |-
+    Get the last year of commit activity data.
+    Returns the last year of commit activity grouped by week. The days array
+    is a group of commits per day, starting on Sunday.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/stats/commit_activity:
     get:
@@ -32,13 +51,6 @@ paths:
       - Stats
       - Commit
       - Activity
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Stats Commit Activity
-  description: |-
-    Get the last year of commit activity data.
-    Returns the last year of commit activity grouped by week. The days array
-    is a group of commits per day, starting on Sunday.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

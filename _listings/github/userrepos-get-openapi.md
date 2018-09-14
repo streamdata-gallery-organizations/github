@@ -1,4 +1,23 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get User Repos
+  description: |-
+    List repositories for the authenticated user. Note that this does not include
+    repositories owned by organizations which the user can access. You can lis
+    user organizations and list organization repositories separately.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /user/repos:
     get:
@@ -24,13 +43,6 @@ paths:
       tags:
       - User
       - Repos
-x-complete: 0
-info:
-  title: Github Get User Repos
-  description: |-
-    List repositories for the authenticated user. Note that this does not include
-    repositories owned by organizations which the user can access. You can lis
-    user organizations and list organization repositories separately.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

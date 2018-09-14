@@ -1,4 +1,26 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Put Teams Team Memberships Username
+  description: |-
+    Add team membership.
+    In order to add a membership between a user and a team, the authenticated user must have 'admin' permissions to the team or be an owner of the organization that the team is associated with.
+
+    If the user is already a part of the team's organization (meaning they're on at least one other team in the organization), this endpoint will add the user to the team.
+
+    If the user is completely unaffiliated with the team's organization (meaning they're on none of the organization's teams), this endpoint will send an invitation to the user via email. This newly-created membership will be in the 'pending' state until the user accepts the invitation, at which point the membership will transition to the 'active' state and the user will be added as a member of the team.
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /teams/{teamId}/memberships/{username}:
     put:
@@ -33,16 +55,6 @@ paths:
       - Team
       - Memberships
       - Username
-x-complete: 0
-info:
-  title: Github Put Teams Team Memberships Username
-  description: |-
-    Add team membership.
-    In order to add a membership between a user and a team, the authenticated user must have 'admin' permissions to the team or be an owner of the organization that the team is associated with.
-
-    If the user is already a part of the team's organization (meaning they're on at least one other team in the organization), this endpoint will add the user to the team.
-
-    If the user is completely unaffiliated with the team's organization (meaning they're on none of the organization's teams), this endpoint will send an invitation to the user via email. This newly-created membership will be in the 'pending' state until the user accepts the invitation, at which point the membership will transition to the 'active' state and the user will be added as a member of the team.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

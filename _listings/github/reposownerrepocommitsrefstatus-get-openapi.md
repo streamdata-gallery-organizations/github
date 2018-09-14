@@ -1,4 +1,24 @@
 ---
+swagger: "2.0"
+x-collection-name: GitHub
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Commits Ref Status
+  description: |-
+    Get the combined Status for a specific Ref
+    The Combined status endpoint is currently available for developers to preview. During the preview period, the API may change without advance notice. Please see the blog post for full details.
+    To access this endpoint during the preview period, you must provide a custom media type in the Accept header:
+    application/vnd.github.she-hulk-preview+json
+  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
+  version: 1.0.0
+host: api.github.com
+basePath: /
+schemes:
+- http
+produces:
+- application/json
+consumes:
+- application/json
 paths:
   /repos/{owner}/{repo}/commits/{ref}/status:
     get:
@@ -35,14 +55,6 @@ paths:
       - Commits
       - Ref
       - Status
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Commits Ref Status
-  description: |-
-    Get the combined Status for a specific Ref
-    The Combined status endpoint is currently available for developers to preview. During the preview period, the API may change without advance notice. Please see the blog post for full details.
-    To access this endpoint during the preview period, you must provide a custom media type in the Accept header:
-    application/vnd.github.she-hulk-preview+json
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
