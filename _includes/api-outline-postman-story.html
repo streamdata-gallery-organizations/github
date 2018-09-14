@@ -23,13 +23,13 @@
       {% assign apis_json = entry %}
       {% include x-common.html %}
 
-      <h3>OpenAPI Definitions For {{ api_name }}</h3>
+      <h3>Postman Collections For {{ api_name }}</h3>
       <p align="right"><img src="{{ api_image }}" width="25%" align="right" style="padding: 15px;" /></p>
       <p>To add a company, organization, institution, or government agency to the API Gallery, you have to have an APIs.json and OpenAPI definition, describing not just the surface area of the API, but also the surface area of their API operations. This set of machine readable definitions provide us what we need to understand exactly what an API offers, as well as to be able add it to the gallery, driving the search, listings, and detail pages for the gallery.</p>
 
       <p>After adding APIs to the gallery we like to write a story about the entity behind the API here on the blog, providing a list of the individual OpenAPI definitions for each of the invidual API endpoints they offer. Today we'd like to showcse the OpenAPI definitions for {{ api_name }}, helping make their API resources more accessible to our audience.</p>
 
-      <p><strong>OpenAPIs:</strong></p>
+      <p><strong>Postman Collections:</strong></p>
       {% for item in listing_object %}
         {% if item.swagger %}
           {% if item.swagger == "2.0" %}
@@ -94,8 +94,8 @@
     	           {% endfor %}
     	         {% endfor %}
 
-              {% if api_json_openapi_spec != '' %}
-                - <a href="/{{ tag_slug }}/{{ api_slug }}/{{ api_path_slug }}/#openapi" target="_blank"><strong>{{ api_path_summary }}</strong></a>
+              {% if api_json_postman_collection != '' %}
+                - <a href="/{{ tag_slug }}/{{ api_slug }}/{{ api_path_slug }}/#postman" target="_blank"><strong>{{ api_path_summary }}</strong></a>
               {% endif %}
 
             {% endif %}
