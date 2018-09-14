@@ -1,26 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Orgs Org Members
-  description: |-
-    Members list.
-    List all users who are members of an organization. A member is a user tha
-    belongs to at least 1 team in the organization. If the authenticated user
-    is also an owner of this organization then both concealed and public members
-    will be returned. If the requester is not an owner of the organization the
-    query will be redirected to the public members list.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -1063,6 +1041,16 @@ paths:
       - Orgs
       - Org
       - Members
+x-complete: 0
+info:
+  title: Github Get Orgs Org Members
+  description: |-
+    Members list.
+    List all users who are members of an organization. A member is a user tha
+    belongs to at least 1 team in the organization. If the authenticated user
+    is also an owner of this organization then both concealed and public members
+    will be returned. If the requester is not an owner of the organization the
+    query will be redirected to the public members list.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

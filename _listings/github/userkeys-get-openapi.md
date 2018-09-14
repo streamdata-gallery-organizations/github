@@ -1,23 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get User Keys
-  description: |-
-    List your public keys.
-    Lists the current user's keys. Management of public keys via the API requires
-    that you are authenticated through basic auth, or OAuth with the 'user', 'write:public_key' scopes.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -6373,6 +6354,13 @@ paths:
       tags:
       - User
       - Keys
+x-complete: 0
+info:
+  title: Github Get User Keys
+  description: |-
+    List your public keys.
+    Lists the current user's keys. Management of public keys via the API requires
+    that you are authenticated through basic auth, or OAuth with the 'user', 'write:public_key' scopes.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

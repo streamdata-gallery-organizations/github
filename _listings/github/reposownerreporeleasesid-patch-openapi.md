@@ -1,20 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Patch Repos Owner Repo Releases
-  description: Users with push access to the repository can edit a release
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -5026,6 +5010,10 @@ paths:
       - Owner
       - Repo
       - Releases
+x-complete: 0
+info:
+  title: Github Patch Repos Owner Repo Releases
+  description: Users with push access to the repository can edit a release
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

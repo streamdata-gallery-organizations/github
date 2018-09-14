@@ -1,25 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Repositories
-  description: |-
-    List all public repositories.
-    This provides a dump of every public repository, in the order that they
-    were created.
-    Note: Pagination is powered exclusively by the since parameter. is the
-    Link header to get the URL for the next page of repositories.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -5571,6 +5550,15 @@ paths:
           description: OK
       tags:
       - Repositories
+x-complete: 0
+info:
+  title: Github Get Repositories
+  description: |-
+    List all public repositories.
+    This provides a dump of every public repository, in the order that they
+    were created.
+    Note: Pagination is powered exclusively by the since parameter. is the
+    Link header to get the URL for the next page of repositories.
 x-streamrank:
   polling_total_time_average: "0.28"
   polling_size_download_average: "410971.49"

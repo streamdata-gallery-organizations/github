@@ -1,26 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Archive Format Path
-  description: |-
-    Get archive link.
-    This method will return a 302 to a URL to download a tarball or zipball
-    archive for a repository. Please make sure your HTTP framework is
-    configured to follow redirects or you will need to use the Location header
-    to make a second GET request.
-    Note: For private repositories, these links are temporary and expire quickly.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -5545,6 +5523,16 @@ paths:
       - Archives
       - Format
       - Path
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Archive Format Path
+  description: |-
+    Get archive link.
+    This method will return a 302 to a URL to download a tarball or zipball
+    archive for a repository. Please make sure your HTTP framework is
+    configured to follow redirects or you will need to use the Location header
+    to make a second GET request.
+    Note: For private repositories, these links are temporary and expire quickly.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

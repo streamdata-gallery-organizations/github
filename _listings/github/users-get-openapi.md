@@ -1,24 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Users
-  description: |-
-    Get all users.
-    This provides a dump of every user, in the order that they signed up for GitHub.
-    Note: Pagination is powered exclusively by the since parameter. Use the Link
-    header to get the URL for the next page of users.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -6756,6 +6736,14 @@ paths:
           description: OK
       tags:
       - Users
+x-complete: 0
+info:
+  title: Github Get Users
+  description: |-
+    Get all users.
+    This provides a dump of every user, in the order that they signed up for GitHub.
+    Note: Pagination is powered exclusively by the since parameter. Use the Link
+    header to get the URL for the next page of users.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

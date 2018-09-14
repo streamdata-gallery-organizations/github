@@ -1,20 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Add Repos Owner Repo Deployments
-  description: Users with push access can create a deployment for a given ref
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -2205,6 +2189,10 @@ paths:
       - Owner
       - Repo
       - Deployments
+x-complete: 0
+info:
+  title: Github Add Repos Owner Repo Deployments
+  description: Users with push access can create a deployment for a given ref
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

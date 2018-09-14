@@ -1,24 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Add Repos Owner Repo Git Trees
-  description: |-
-    Create a Tree.
-    The tree creation API will take nested entries as well. If both a tree and
-    a nested path modifying that tree are specified, it will overwrite the
-    contents of that tree with the new path contents and write a new tree out.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -2849,6 +2829,14 @@ paths:
       - Repo
       - Git
       - Trees
+x-complete: 0
+info:
+  title: Github Add Repos Owner Repo Git Trees
+  description: |-
+    Create a Tree.
+    The tree creation API will take nested entries as well. If both a tree and
+    a nested path modifying that tree are specified, it will overwrite the
+    contents of that tree with the new path contents and write a new tree out.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

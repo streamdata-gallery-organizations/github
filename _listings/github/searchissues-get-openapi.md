@@ -1,21 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Search Issues
-  description: Find issues by state and keyword. (This method returns up to 100 results
-    per page.)
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -5626,6 +5609,11 @@ paths:
       tags:
       - Search
       - Issues
+x-complete: 0
+info:
+  title: Github Get Search Issues
+  description: Find issues by state and keyword. (This method returns up to 100 results
+    per page.)
 x-streamrank:
   polling_total_time_average: "0.98"
   polling_size_download_average: "80476.4"

@@ -1,26 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Repos Owner Repo Contents Path
-  description: |-
-    Get contents.
-    This method returns the contents of a file or directory in a repository.
-    Files and symlinks support a custom media type for getting the raw content.
-    Directories and submodules do not support custom media types.
-    Note: This API supports files up to 1 megabyte in size.
-    Here can be many outcomes. For details see "http://developer.github.com/v3/repos/contents/"
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -2091,6 +2069,16 @@ paths:
       - Repo
       - Contents
       - Path
+x-complete: 0
+info:
+  title: Github Get Repos Owner Repo Contents Path
+  description: |-
+    Get contents.
+    This method returns the contents of a file or directory in a repository.
+    Files and symlinks support a custom media type for getting the raw content.
+    Directories and submodules do not support custom media types.
+    Note: This API supports files up to 1 megabyte in size.
+    Here can be many outcomes. For details see "http://developer.github.com/v3/repos/contents/"
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

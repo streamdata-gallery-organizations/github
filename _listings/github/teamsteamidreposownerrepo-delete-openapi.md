@@ -1,22 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Delete Teams Team Repos Owner Repo
-  description: 'In order to remove a repository from a team, the authenticated user
-    must be an owner of the org that the team is associated with. NOTE: This does
-    not delete the repository, it just removes it from the team.'
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -6059,6 +6041,12 @@ paths:
       - Repos
       - Owner
       - Repo
+x-complete: 0
+info:
+  title: Github Delete Teams Team Repos Owner Repo
+  description: 'In order to remove a repository from a team, the authenticated user
+    must be an owner of the org that the team is associated with. NOTE: This does
+    not delete the repository, it just removes it from the team.'
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -1,22 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Orgs Org Issues
-  description: |-
-    List issues.
-    List all issues for a given organization for the authenticated user.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -1030,6 +1012,12 @@ paths:
       - Orgs
       - Org
       - Issues
+x-complete: 0
+info:
+  title: Github Get Orgs Org Issues
+  description: |-
+    List issues.
+    List all issues for a given organization for the authenticated user.
 x-streamrank:
   polling_total_time_average: "0.09"
   polling_size_download_average: "65.33"

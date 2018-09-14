@@ -1,26 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Add Repos Owner Repo Git Tags
-  description: |-
-    Create a Tag Object.
-    Note that creating a tag object does not create the reference that makes a
-    tag in Git. If you want to create an annotated tag in Git, you have to do
-    this call to create the tag object, and then create the refs/tags/[tag]
-    reference. If you want to create a lightweight tag, you only have to create
-    the tag reference - this call would be unnecessary.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -2784,6 +2762,16 @@ paths:
       - Repo
       - Git
       - Tags
+x-complete: 0
+info:
+  title: Github Add Repos Owner Repo Git Tags
+  description: |-
+    Create a Tag Object.
+    Note that creating a tag object does not create the reference that makes a
+    tag in Git. If you want to create an annotated tag in Git, you have to do
+    this call to create the tag object, and then create the refs/tags/[tag]
+    reference. If you want to create a lightweight tag, you only have to create
+    the tag reference - this call would be unnecessary.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

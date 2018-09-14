@@ -1,22 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Legacy Repos Search Keyword
-  description: Find repositories by keyword. Note, this legacy method does not follow
-    the v3 pagination pattern. This method returns up to 100 results per page and
-    pages can be fetched using the start_page parameter.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -601,6 +583,12 @@ paths:
       - Repos
       - Search
       - Keyword
+x-complete: 0
+info:
+  title: Github Get Legacy Repos Search Keyword
+  description: Find repositories by keyword. Note, this legacy method does not follow
+    the v3 pagination pattern. This method returns up to 100 results per page and
+    pages can be fetched using the start_page parameter.
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0

@@ -1,20 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Search Repositories
-  description: Search repositories.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -5653,6 +5637,10 @@ paths:
       tags:
       - Search
       - Repositories
+x-complete: 0
+info:
+  title: Github Get Search Repositories
+  description: Search repositories.
 x-streamrank:
   polling_total_time_average: "0.7"
   polling_size_download_average: "149672.32"

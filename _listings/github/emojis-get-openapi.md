@@ -1,20 +1,4 @@
 ---
-swagger: "2.0"
-x-collection-name: GitHub
-x-complete: 0
-info:
-  title: Github Get Emojis
-  description: Lists all the emojis available to use on GitHub.
-  termsOfService: https://help.github.com/articles/github-terms-of-service/#b-api-terms
-  version: 1.0.0
-host: api.github.com
-basePath: /
-schemes:
-- http
-produces:
-- application/json
-consumes:
-- application/json
 paths:
   /emojis:
     get:
@@ -34,6 +18,10 @@ paths:
           description: OK
       tags:
       - Emojis
+x-complete: 0
+info:
+  title: Github Get Emojis
+  description: Lists all the emojis available to use on GitHub.
 x-streamrank:
   polling_total_time_average: "0.12"
   polling_size_download_average: "129852.21"
