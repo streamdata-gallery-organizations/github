@@ -36,9 +36,9 @@ layout: default
        {% endif %}
      {% endfor %}
 
+     {% include api-paths.html %}
      {% include apis-json.html %}
      {% include x-common.html %}
-     {% include api-paths.html %}
      {% include api-url.html %}
      {% include api-stream-url.html %}
 
@@ -47,7 +47,7 @@ layout: default
      {% include api-details.html %}
 
    {% else %}
-   
+
      {% assign apis_json = page %}
 
      {% include apis-json.html %}
